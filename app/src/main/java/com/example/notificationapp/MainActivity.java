@@ -23,10 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private int notificationId = 1; // Initialize the notification ID
     EditText notification_text;
 
+    Boolean isPremium = true;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         NotificationChannel channel = new NotificationChannel("1", "Notification", NotificationManager.IMPORTANCE_HIGH);
         NotificationManager notificationManager = getSystemService(NotificationManager.class);
@@ -56,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 .addAction(R.mipmap.ic_launcher, "Play", pendingIntent)
                 .addAction(R.mipmap.ic_launcher, "Cancel", cancelContentIntent)
                 .setColor(Color.RED)
-                .setPriority(NotificationCompat.PRIORITY_HIGH);
+                .setPriority(NotificationCompat.PRIORITY_HIGH).setOngoing(isPremium);
 
         NotificationManager notificationManager = getSystemService(NotificationManager.class);
 
