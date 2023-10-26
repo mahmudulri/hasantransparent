@@ -10,18 +10,37 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        >
-        <Button
 
-            android:layout_gravity="left"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/rounded_button"
-            android:text="premium" />
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_button"
+                android:text="premium" />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:id="@+id/viewalldata"
+                android:onClick="viewonclickdata"
+
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_button"
+                android:text="viewall" />
+
+
+
+
+
+        </LinearLayout>
 
         <EditText
             android:layout_marginTop="5dp"
@@ -35,6 +54,7 @@
             android:background="@drawable/rounded_button"
             android:layout_height="50dp"/>
         <Button
+
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:id="@+id/notification_button"
@@ -47,7 +67,13 @@
             android:text="Add" />
 
 
-    </LinearLayout>
+
+
+
+
+
+
+
 
 
 
