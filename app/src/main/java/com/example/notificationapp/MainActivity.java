@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private  DatabaseHelper databaseHelper;
+
     private  Context context;
 
     private int notificationId = 1; // Initialize the notification ID
@@ -44,13 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         //......................................  Database Helper...............//
-        databaseHelper= new DatabaseHelper(this);
-        SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-
-
-
-
-
 
 
 
@@ -122,8 +115,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void viewonclickdata(View view) {
-        Intent intent = new Intent(MainActivity.this, ViewAllData.class);
-        startActivity(intent);
-    }
+
 }
